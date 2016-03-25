@@ -1,5 +1,5 @@
 import {Pipe, PipeTransform} from 'angular2/core';
-import {Keg} from './keg.model';
+import {Meal} from './meal.model';
 
 @Pipe({
   name: "done",
@@ -7,16 +7,16 @@ import {Keg} from './keg.model';
 })
 // DonePipe must be able to communicate and get info from PipeTransform interface (from angular)
 export class DonePipe implements PipeTransform {
-  transform(input: Keg[], args) {
+  transform(input: Meal[], args) {
     var desiredDoneState = args[0];
-    // boolean if/else loop that filters kegs
+    // boolean if/else loop that filters meals
     if(desiredDoneState === "done") {
-      return input.filter((keg) => {
-        return keg.done;
+      return input.filter((meal) => {
+        return meal.done;
       });
     } else if (desiredDoneState === "notDone") {
-      return input.filter((keg) => {
-        return !keg.done;
+      return input.filter((meal) => {
+        return !meal.done;
       });
     } else {
       return input;
