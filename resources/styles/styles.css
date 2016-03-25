@@ -35,13 +35,15 @@ body {
 
 .edit-meal-form {
   background: oldlace;
-  display: flex;
-  margin-bottom: 30px;
+}
+
+.edit-meal-form label {
+  width: 20%;
 }
 
 .edit-meal-form input {
   margin: 5px;
-  width: 100%;
+  width: 75%;
 }
 
 .animateSelected {

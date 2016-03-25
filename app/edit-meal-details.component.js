@@ -25,7 +25,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     core_1.Component({
                         selector: 'edit-meal-details',
                         inputs: ['meal'],
-                        template: "\n  <div class=\"edit-meal-form\">\n    <h3>Edit Description:</h3>\n    <input [(ngModel)]=\"meal.food\" class=\"meal-edit input-lg\"/>\n    <input [(ngModel)]=\"meal.notes\" class=\"meal-edit input-lg\"/>\n    <input [(ngModel)]=\"meal.calories\" class=\"meal-edit input-lg\"/>\n  </div>\n  "
+                        template: "\n  <div class=\"edit-meal-form\">\n    <h3>Edit Description:</h3>\n    <label>Food:</label>\n    <input [(ngModel)]=\"meal.food\" class=\"meal-edit input-lg\"/> <br>\n    <label>Notes:</label>\n    <input [(ngModel)]=\"meal.notes\" class=\"meal-edit input-lg\"/> <br>\n    <label>Calories:</label>\n    <input [(ngModel)]=\"meal.calories\" class=\"meal-edit input-lg\"/>\n  </div>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], EditMealDetailsComponent);

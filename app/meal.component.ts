@@ -14,7 +14,7 @@ import { EditMealDetailsComponent } from './edit-meal-details.component';
   <meal-details
     *ngIf="isSelected"> <br>
     Notes: {{ meal.notes }} <br>
-    Calories: {{ meal.calories }}
+    Calories: {{ meal.calories }} <br><br>
   </meal-details>
   <edit-meal-details
     *ngIf="isSelected" [meal]="meal">
