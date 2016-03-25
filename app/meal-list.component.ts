@@ -27,7 +27,6 @@ import {DonePipe} from './done.pipe';
   <new-meal (onSubmitNewMeal)="createMeal($event)"></new-meal>
   `
   // done:filterDone:selectedMeal refers to the done.pipe, calls its functionality
-  // templateUrl: 'app/meal-list.component.html'
   // add .selected class to meal coming from parent that is simultaneously the selected and current meal
 })
 export class MealListComponent {

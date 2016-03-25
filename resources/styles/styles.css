@@ -4,7 +4,6 @@ h1 {
 
 .selected {
   color: tomato;
-  transition: all .3s linear;
 }
 
 .task-form {
