@@ -24,8 +24,9 @@ export class AppComponent {
   public meals: Meal[];  // Meal[] (or Array<Meal>) identifies meals as an array of Meal objects
   constructor(){
     this.meals = [
-      new Meal("coors", "beer", 2, 4)
-
+      new Meal("smoothie", "yum, lots of fruit", 200),
+      new Meal("fries", "no regrets", 400),
+      new Meal("Quinoa and Peas", "yes, peas", 300)
     ];
   }
   mealWasSelected(clickedMeal: Meal): void {

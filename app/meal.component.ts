@@ -25,7 +25,4 @@ export class MealComponent {
   toggleDone(setState: boolean){
     this.meal.done = setState;
   }
-  pintsLeft() {
-    this.meal.pintsLeft = this.meal.pintsLeft -1;
-  }
 }

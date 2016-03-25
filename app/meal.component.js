@@ -29,9 +29,6 @@ System.register(['angular2/core', './edit-meal-details.component'], function(exp
                 MealComponent.prototype.toggleDone = function (setState) {
                     this.meal.done = setState;
                 };
-                MealComponent.prototype.pintsLeft = function () {
-                    this.meal.pintsLeft = this.meal.pintsLeft - 1;
-                };
                 MealComponent = __decorate([
                     core_1.Component({
                         selector: 'meal-display',
