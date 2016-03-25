@@ -12,9 +12,9 @@ import { EditMealDetailsComponent } from './edit-meal-details.component';
   <div class="animateSelected">
   <edit-meal-details *ngIf="isSelected" [meal]="meal">
   </edit-meal-details>
-  <label>{{ meal.name }} <br> {{ meal.brand }} <br><span [class.lowprice]="meal.price < 5" [class.highprice]="meal.price > 5"> $ {{ meal.price }} </span><br> {{ meal.alcoholContent }} % <br><br> pints left: {{ meal.pintsLeft }}</label>
-  <button (click)="pintsLeft()">Pour a Pint</button>
-  <button class="editmeal">hi</button>
+  <label> Food: {{ meal.food }} <br>
+          Note: {{ meal.notes }} <br>
+          Calories: {{ meal.calories }} </label>
 </div>
   `
 })
