@@ -20,7 +20,11 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         execute: function() {
             EditMealDetailsComponent = (function () {
                 function EditMealDetailsComponent() {
+                    this.onSubmitMealEdit = new core_1.EventEmitter();
                 }
+                EditMealDetailsComponent.prototype.submitEdit = function () {
+                    this.onSubmitMealEdit.emit(true);
+                };
                 EditMealDetailsComponent = __decorate([
                     core_1.Component({
                         selector: 'edit-meal-details',
