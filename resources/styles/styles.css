@@ -1,0 +1,66 @@
+h1 {
+  color: blue;
+}
+
+.selected {
+  color: tomato;
+  transition: all .3s linear;
+}
+
+.task-form {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.add-button {
+  margin: 10px auto;
+  padding: 8px auto;
+}
+
+.filter {
+  margin: 20px auto;
+}
+
+body {
+  margin: 20px;
+}
+
+.new-keg-form {
+  background-color: mistyrose;
+  display: flex;
+}
+.new-keg-form input {
+  margin: 5px;
+  width: 90%;
+}
+
+.edit-keg-form {
+  background: oldlace;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.edit-keg-form input {
+  margin: 5px;
+  width: 100%;
+}
+
+.animateSelected {
+  font-size: 25px;
+  border: 2px solid tomato;
+  width: 100%;
+  padding: 20px;
+  margin: 5px;
+}
+
+.lowprice {
+  color: green;
+}
+
+.highprice {
+  color: #22bdf0;;
+}
+
+keg-display {
+  color: lime;
+}
