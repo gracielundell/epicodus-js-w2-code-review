@@ -10,14 +10,14 @@ import {Meal} from './meal.model';
     <input placeholder="Meal Description" class="col-sm-8 input-lg" #newFood>
     <input placeholder="Meal Notes" class="col-sm-8 input-lg" #newNotes>
     <input placeholder="Calories" class="col-sm-8 input-lg" #newCalories >
-    <button (click)="addMeal(newName, newBrand, newPrice, newAlcoholContent)" class="btn-success btn-lg add-button">Add</button>
+    <button (click)="addMeal(newFood, newNotes, newCalories)" class="btn-success btn-lg add-button">Add</button>
   </div>
   `
 })
 export class NewMealComponent {
   public onSubmitNewMeal: EventEmitter<Meal>;
     constructor(){
-      // create and emit new eventEmitter to be sent out into the world
+      // create and emit new eventEmitter to be sent out into the world(other files)
       this.onSubmitNewMeal = new EventEmitter();
     }
     // takes in user input, which is seen as an html element

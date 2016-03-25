@@ -25,22 +25,22 @@ body {
   margin: 20px;
 }
 
-.new-keg-form {
+.new-meal-form {
   background-color: mistyrose;
   display: flex;
 }
-.new-keg-form input {
+.new-meal-form input {
   margin: 5px;
   width: 90%;
 }
 
-.edit-keg-form {
+.edit-meal-form {
   background: oldlace;
   display: flex;
   margin-bottom: 30px;
 }
 
-.edit-keg-form input {
+.edit-meal-form input {
   margin: 5px;
   width: 100%;
 }
@@ -51,16 +51,4 @@ body {
   width: 100%;
   padding: 20px;
   margin: 5px;
-}
-
-.lowprice {
-  color: green;
-}
-
-.highprice {
-  color: #22bdf0;;
-}
-
-keg-display {
-  color: lime;
 }

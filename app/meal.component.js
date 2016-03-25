@@ -35,7 +35,7 @@ System.register(['angular2/core', './edit-meal-details.component'], function(exp
                         inputs: ['meal', 'isSelected'],
                         directives: [edit_meal_details_component_1.EditMealDetailsComponent],
                         // toggles which list is shown, done or not done but both technically present
-                        template: "\n  <div class=\"animateSelected\">\n  <edit-meal-details *ngIf=\"isSelected\" [meal]=\"meal\">\n  </edit-meal-details>\n  <label> Food: {{ meal.food }} <br>\n          Note: {{ meal.notes }} <br>\n          Calories: {{ meal.calories }} </label>\n</div>\n  "
+                        template: "\n  <div class=\"animateSelected\">\n  <label> Food: {{ meal.food }} <br> </label>\n  <edit-meal-details *ngIf=\"isSelected\" [meal]=\"meal\">\n  </edit-meal-details>\n</div>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], MealComponent);

@@ -23,7 +23,7 @@ System.register(['angular2/core', './meal.model'], function(exports_1, context_1
         execute: function() {
             NewMealComponent = (function () {
                 function NewMealComponent() {
-                    // create and emit new eventEmitter to be sent out into the world
+                    // create and emit new eventEmitter to be sent out into the world(other files)
                     this.onSubmitNewMeal = new core_1.EventEmitter();
                 }
                 // takes in user input, which is seen as an html element
@@ -38,7 +38,7 @@ System.register(['angular2/core', './meal.model'], function(exports_1, context_1
                     core_1.Component({
                         selector: 'new-meal',
                         outputs: ['onSubmitNewMeal'],
-                        template: "\n  <div class=\"new-meal-form\">\n    <h3>Create Meal:</h3>\n    <input placeholder=\"Meal Description\" class=\"col-sm-8 input-lg\" #newFood>\n    <input placeholder=\"Meal Notes\" class=\"col-sm-8 input-lg\" #newNotes>\n    <input placeholder=\"Calories\" class=\"col-sm-8 input-lg\" #newCalories >\n    <button (click)=\"addMeal(newName, newBrand, newPrice, newAlcoholContent)\" class=\"btn-success btn-lg add-button\">Add</button>\n  </div>\n  "
+                        template: "\n  <div class=\"new-meal-form\">\n    <h3>Create Meal:</h3>\n    <input placeholder=\"Meal Description\" class=\"col-sm-8 input-lg\" #newFood>\n    <input placeholder=\"Meal Notes\" class=\"col-sm-8 input-lg\" #newNotes>\n    <input placeholder=\"Calories\" class=\"col-sm-8 input-lg\" #newCalories >\n    <button (click)=\"addMeal(newFood, newNotes, newCalories)\" class=\"btn-success btn-lg add-button\">Add</button>\n  </div>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], NewMealComponent);

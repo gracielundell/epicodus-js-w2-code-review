@@ -10,11 +10,9 @@ import { EditMealDetailsComponent } from './edit-meal-details.component';
   // toggles which list is shown, done or not done but both technically present
   template: `
   <div class="animateSelected">
+  <label> Food: {{ meal.food }} <br> </label>
   <edit-meal-details *ngIf="isSelected" [meal]="meal">
   </edit-meal-details>
-  <label> Food: {{ meal.food }} <br>
-          Note: {{ meal.notes }} <br>
-          Calories: {{ meal.calories }} </label>
 </div>
   `
 })
