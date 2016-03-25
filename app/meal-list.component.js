@@ -1,4 +1,4 @@
-System.register(['angular2/core', './meal.component', './new-meal.component', './done.pipe'], function(exports_1, context_1) {
+System.register(['angular2/core', './meal.component', './new-meal.component', './calories.pipe'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './meal.component', './new-meal.component', '.
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, meal_component_1, new_meal_component_1, done_pipe_1;
+    var core_1, meal_component_1, new_meal_component_1, calories_pipe_1;
     var MealListComponent;
     return {
         setters:[
@@ -23,8 +23,8 @@ System.register(['angular2/core', './meal.component', './new-meal.component', '.
             function (new_meal_component_1_1) {
                 new_meal_component_1 = new_meal_component_1_1;
             },
-            function (done_pipe_1_1) {
-                done_pipe_1 = done_pipe_1_1;
+            function (calories_pipe_1_1) {
+                calories_pipe_1 = calories_pipe_1_1;
             }],
         execute: function() {
             // child component
@@ -53,9 +53,9 @@ System.register(['angular2/core', './meal.component', './new-meal.component', '.
                         selector: 'meal-list',
                         inputs: ['mealList'],
                         outputs: ['onMealSelect'],
-                        pipes: [done_pipe_1.DonePipe],
+                        pipes: [calories_pipe_1.CaloriesPipe],
                         directives: [meal_component_1.MealComponent, new_meal_component_1.NewMealComponent],
-                        template: "\n  <select (change)=\"onChange($event.target.value)\" class=\"filter\">\n    <option value=\"all\">Show All</option>\n    <option value=\"done\">Show Empty(Done)</option>\n    <option value=\"notDone\" selected=\"selected\">Show Not Done</option>\n  </select>\n\n  <meal-display *ngFor=\"#currentMeal of mealList | done:filterDone\"\n    (click)=\"mealClicked(currentMeal)\"\n    [class.selected]=\"currentMeal === selectedMeal\"\n    [meal]=\"currentMeal\" [isSelected]=\"currentMeal === selectedMeal\">\n  </meal-display>\n\n  <new-meal (onSubmitNewMeal)=\"createMeal($event)\"></new-meal>\n  "
+                        template: "\n  <select (change)=\"onChange($event.target.value)\" class=\"filter\">\n    <option value=\"all\" selected=\"selected\">Show All</option>\n    <option value=\"lessThan300\">Show Healthy Meals</option>\n    <option value=\"moreThan300\">Show Unhealthy Meals</option>\n  </select>\n\n  <meal-display *ngFor=\"#currentMeal of mealList | calories:filterDone\"\n    (click)=\"mealClicked(currentMeal)\"\n    [class.selected]=\"currentMeal === selectedMeal\"\n    [meal]=\"currentMeal\" [isSelected]=\"currentMeal === selectedMeal\">\n  </meal-display>\n\n  <new-meal (onSubmitNewMeal)=\"createMeal($event)\"></new-meal>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], MealListComponent);

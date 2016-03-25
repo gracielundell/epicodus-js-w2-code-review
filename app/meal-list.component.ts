@@ -2,23 +2,23 @@ import { Component, EventEmitter } from 'angular2/core';
 import { MealComponent } from './meal.component';
 import { Meal } from './meal.model';
 import { NewMealComponent } from './new-meal.component';
-import {DonePipe} from './done.pipe';
+import { CaloriesPipe } from './calories.pipe';
 
 // child component
 @Component({
   selector: 'meal-list',
   inputs: ['mealList'],
   outputs: ['onMealSelect'],
-  pipes: [DonePipe],
+  pipes: [CaloriesPipe],
   directives: [MealComponent, NewMealComponent],
   template: `
   <select (change)="onChange($event.target.value)" class="filter">
-    <option value="all">Show All</option>
-    <option value="done">Show Empty(Done)</option>
-    <option value="notDone" selected="selected">Show Not Done</option>
+    <option value="all" selected="selected">Show All</option>
+    <option value="lessThan300">Show Healthy Meals</option>
+    <option value="moreThan300">Show Unhealthy Meals</option>
   </select>
 
-  <meal-display *ngFor="#currentMeal of mealList | done:filterDone"
+  <meal-display *ngFor="#currentMeal of mealList | calories:filterDone"
     (click)="mealClicked(currentMeal)"
     [class.selected]="currentMeal === selectedMeal"
     [meal]="currentMeal" [isSelected]="currentMeal === selectedMeal">
