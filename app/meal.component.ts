@@ -9,7 +9,7 @@ import { EditMealDetailsComponent } from './edit-meal-details.component';
   directives: [EditMealDetailsComponent],
   // toggles which list is shown, done or not done but both technically present
   template: `
-  <div class="animateSelected">
+  <div>
   <label> Meal: {{ meal.food }} </label>
   <div class="meal-details">
     <meal-details
@@ -17,13 +17,11 @@ import { EditMealDetailsComponent } from './edit-meal-details.component';
       Notes: {{ meal.notes }} <br>
       Calories: {{ meal.calories }} <br><br>
       <button (click)="editMeal(meal)" type="button">Edit Meal</button>
+      <edit-meal-details
+      *ngIf="mealToEdit" (onSubmitMealEdit)="submitEdit($event)" [meal]="meal">
+      </edit-meal-details>
     </meal-details>
   </div>
-
-  <edit-meal-details
-    *ngIf="mealToEdit" (onSubmitMealEdit)="submitEdit($event)" [meal]="meal">
-  </edit-meal-details>
-</div>
   `
 })
 

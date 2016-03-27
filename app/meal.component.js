@@ -41,7 +41,7 @@ System.register(['angular2/core', './edit-meal-details.component'], function(exp
                         inputs: ['meal', 'isSelected'],
                         directives: [edit_meal_details_component_1.EditMealDetailsComponent],
                         // toggles which list is shown, done or not done but both technically present
-                        template: "\n  <div class=\"animateSelected\">\n  <label> Meal: {{ meal.food }} </label>\n  <div class=\"meal-details\">\n    <meal-details\n      *ngIf=\"isSelected\">\n      Notes: {{ meal.notes }} <br>\n      Calories: {{ meal.calories }} <br><br>\n      <button (click)=\"editMeal(meal)\" type=\"button\">Edit Meal</button>\n    </meal-details>\n  </div>\n\n  <edit-meal-details\n    *ngIf=\"mealToEdit\" (onSubmitMealEdit)=\"submitEdit($event)\" [meal]=\"meal\">\n  </edit-meal-details>\n</div>\n  "
+                        template: "\n  <div>\n  <label> Meal: {{ meal.food }} </label>\n  <div class=\"meal-details\">\n    <meal-details\n      *ngIf=\"isSelected\">\n      Notes: {{ meal.notes }} <br>\n      Calories: {{ meal.calories }} <br><br>\n      <button (click)=\"editMeal(meal)\" type=\"button\">Edit Meal</button>\n      <edit-meal-details\n      *ngIf=\"mealToEdit\" (onSubmitMealEdit)=\"submitEdit($event)\" [meal]=\"meal\">\n      </edit-meal-details>\n    </meal-details>\n  </div>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], MealComponent);
