@@ -17,12 +17,13 @@ import { CaloriesPipe } from './calories.pipe';
     <option value="lessThan300">Show Healthy Meals</option>
     <option value="moreThan300">Show Unhealthy Meals</option>
   </select>
-
-  <meal-display *ngFor="#currentMeal of mealList | calories:filterDone"
-    (click)="mealClicked(currentMeal)"
-    [class.selected]="currentMeal === selectedMeal"
-    [meal]="currentMeal" [isSelected]="currentMeal === selectedMeal">
-  </meal-display>
+  <div class="meal-list">
+    <meal-display *ngFor="#currentMeal of mealList | calories:filterDone"
+      (click)="mealClicked(currentMeal)"
+      [class.selected]="currentMeal === selectedMeal"
+      [meal]="currentMeal" [isSelected]="currentMeal === selectedMeal">
+    </meal-display>
+  </div>
 
   <new-meal (onSubmitNewMeal)="createMeal($event)"></new-meal>
   `

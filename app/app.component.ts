@@ -12,7 +12,10 @@ import { Meal } from './meal.model';
   // this loops through and prints tasks to page inside html selector ^
   template: `
   <div>
-    <h1 class="header">Meal Tracker</h1>
+    <div class="header">
+      <h1>You Are What You Eat</h1>
+      <h4>A Personsal Meal Tracker</h4>
+    </div>
       <meal-list
         [mealList]="meals"
         (onMealSelect)="mealWasSelected($event)">

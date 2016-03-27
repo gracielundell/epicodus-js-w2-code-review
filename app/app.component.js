@@ -42,7 +42,7 @@ System.register(['angular2/core', './meal-list.component', './meal.model'], func
                         selector: 'my-app',
                         directives: [meal_list_component_1.MealListComponent],
                         // this loops through and prints tasks to page inside html selector ^
-                        template: "\n  <div>\n    <h1 class=\"header\">Meal Tracker</h1>\n      <meal-list\n        [mealList]=\"meals\"\n        (onMealSelect)=\"mealWasSelected($event)\">\n      </meal-list>\n    </div>\n  "
+                        template: "\n  <div>\n    <div class=\"header\">\n      <h1>You Are What You Eat</h1>\n      <h4>A Personsal Meal Tracker</h4>\n    </div>\n      <meal-list\n        [mealList]=\"meals\"\n        (onMealSelect)=\"mealWasSelected($event)\">\n      </meal-list>\n    </div>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

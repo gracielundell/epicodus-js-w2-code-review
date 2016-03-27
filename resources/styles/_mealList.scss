@@ -1,0 +1,11 @@
+.meal-list {
+  display: flex;
+  width: 45%;
+  margin: auto;
+  align-items: flex-start;
+  flex-direction: column;
+  label {
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+}
