@@ -11,12 +11,14 @@ import { EditMealDetailsComponent } from './edit-meal-details.component';
   template: `
   <div class="animateSelected">
   <label> Meal: {{ meal.food }} </label>
-  <meal-details
-    *ngIf="isSelected"> <br>
-    Notes: {{ meal.notes }} <br>
-    Calories: {{ meal.calories }} <br><br>
-    <button (click)="editMeal(meal)" type="button">Edit Meal</button>
-  </meal-details>
+  <div class="meal-details">
+    <meal-details
+      *ngIf="isSelected">
+      Notes: {{ meal.notes }} <br>
+      Calories: {{ meal.calories }} <br><br>
+      <button (click)="editMeal(meal)" type="button">Edit Meal</button>
+    </meal-details>
+  </div>
 
   <edit-meal-details
     *ngIf="mealToEdit" (onSubmitMealEdit)="submitEdit($event)" [meal]="meal">
