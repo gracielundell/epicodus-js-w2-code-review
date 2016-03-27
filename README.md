@@ -22,7 +22,7 @@ Then run *$ npm install -g* and *$ npm install bower -g* to install those depend
 -Typescript
 -Node.js and Node Package Manager dependencies
 -Bootstrap
--CSS
+-CSS with Sass
 -HTML
 
 ##Legal
