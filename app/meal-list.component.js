@@ -43,7 +43,7 @@ System.register(['angular2/core', './meal.component', './new-meal.component', '.
                     // new meal of the Meal type
                     // push new meal into meal-list array, keep track of its index number(assign it to this meal)
                     this.mealList.push(newMeal);
-                    // push new instance of Meal this instance of a meal)
+                    // push new instance of Meal, this instance of a meal
                 };
                 MealListComponent.prototype.onChange = function (filterOption) {
                     this.filterDone = filterOption;

@@ -28,7 +28,6 @@ import { CaloriesPipe } from './calories.pipe';
 
   <new-meal (onSubmitNewMeal)="createMeal($event)"></new-meal>
   `
-  // done:filterDone:selectedMeal refers to the done.pipe, calls its functionality
   // add .selected class to meal coming from parent that is simultaneously the selected and current meal
 })
 export class MealListComponent {
@@ -49,7 +48,7 @@ export class MealListComponent {
     // new meal of the Meal type
     // push new meal into meal-list array, keep track of its index number(assign it to this meal)
     this.mealList.push(newMeal);
-    // push new instance of Meal this instance of a meal)
+    // push new instance of Meal, this instance of a meal
   }
   onChange(filterOption) {
     this.filterDone = filterOption;
