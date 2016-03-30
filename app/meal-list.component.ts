@@ -18,6 +18,7 @@ import { CaloriesPipe } from './calories.pipe';
     <option value="moreThan300">Show Unhealthy Meals</option>
   </select>
   <div class="meal-list">
+    <h3>Tracked Meals</h3>
     <meal-display *ngFor="#currentMeal of mealList | calories:filterDone"
       (click)="mealClicked(currentMeal)"
       [class.selected]="currentMeal === selectedMeal"
