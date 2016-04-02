@@ -18,12 +18,12 @@ Clone [this](https://github.com/gracielundell/epicodus-js-w2-code-review.git) re
 Then run *$ npm install -g* and *$ npm install bower -g* to install those dependencies globally. Run *$ npm init* and *$ bower init* to initiate. To build the server the app uses, run *$ gulp build* and *$ gulp serve*
 
 ##Technologies
--Angular 2.0
--Typescript
--Node.js and Node Package Manager dependencies
--Bootstrap
--CSS with Sass
--HTML
+- Angular 2.0
+- Typescript
+- Node.js and Node Package Manager dependencies
+- Bootstrap
+- CSS with Sass
+- HTML
 
 ##Legal
 Copywrite Gracie Lundell &copy; 2016 This software is licensed under the MIT license.
