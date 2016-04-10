@@ -22,8 +22,8 @@ export class EditMealDetailsComponent {
   public onSubmitMealEdit: EventEmitter<boolean>;
   constructor() {
     this.onSubmitMealEdit = new EventEmitter();
-}
+  }
   submitEdit() {
     this.onSubmitMealEdit.emit(true);
-}
+  }
 }
